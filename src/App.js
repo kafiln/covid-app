@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useReducer, useState } from 'react';
+import { getData } from './api';
 import { Regions, Statistics, Title, Toggles } from './components';
 import { Spinner } from './components/common';
-
-const getData = () =>
-  fetch(process.env.REACT_APP_API_URL).then((res) => res.json());
+import { AppContext, AppReducer, initialState } from './context';
 
 function App() {
   const [data, setData] = useState(null);
+  const [state, dispatch] = useReducer(AppReducer, initialState);
 
   useEffect(() => {
     // Get the data from the url
@@ -14,7 +14,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <AppContext.Provider value={{ ...state, dispatch }}>
       <Title />
       <Toggles />
 
@@ -27,7 +27,7 @@ function App() {
       ) : (
         <Spinner />
       )}
-    </>
+    </AppContext.Provider>
   );
 }
 
