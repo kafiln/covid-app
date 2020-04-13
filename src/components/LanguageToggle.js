@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { AppContext, Types } from '../context';
 import { Toggle } from './common';
 
 function LanguageToggle() {
-  const [checked, setChecked] = useState(false);
+  const { lang, dispatch } = useContext(AppContext);
   const handleChange = () => {
-    setChecked(!checked);
+    dispatch({
+      type: Types.CHANGE_LANGUAGE,
+    });
   };
   return (
     <div>
       Français
-      <Toggle checked={checked} onChange={handleChange} />
+      <Toggle checked={lang === 'ar-ma'} onChange={handleChange} />
       Arabic
     </div>
   );

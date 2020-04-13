@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
+import { FormattedMessage } from 'react-intl';
 import { AppContext, Types } from '../context';
+import { KEYS } from '../i18n';
 import { Toggle } from './common';
 
 function ThemeToggle() {
@@ -11,9 +13,9 @@ function ThemeToggle() {
   };
   return (
     <div>
-      Dark
+      <FormattedMessage id={KEYS.DARK}></FormattedMessage>
       <Toggle checked={theme === 'light'} onChange={handleChange} />
-      Light
+      <FormattedMessage id={KEYS.LIGHT}></FormattedMessage>
     </div>
   );
 }

@@ -4,6 +4,7 @@ import { getData } from './api';
 import { Regions, Statistics, Title, Toggles } from './components';
 import { Spinner } from './components/common';
 import { AppContext, AppReducer, initialState } from './context';
+import { I18nProvider } from './i18n';
 import { dark, GlobalStyles, light } from './theme';
 function App() {
   const [data, setData] = useState(null);
@@ -16,21 +17,22 @@ function App() {
 
   return (
     <AppContext.Provider value={{ ...state, dispatch }}>
-      <ThemeProvider theme={state.theme === 'light' ? light : dark}>
-        <GlobalStyles></GlobalStyles>
-        <Title />
-        <Toggles />
-
-        {data ? (
-          <>
-            <Statistics data={data} />
-            {/* //TODO: Toggle regions */}
-            {data.regions && <Regions regions={data.regions} />}
-          </>
-        ) : (
-          <Spinner />
-        )}
-      </ThemeProvider>
+      <I18nProvider locale={state.lang}>
+        <ThemeProvider theme={state.theme === 'light' ? light : dark}>
+          <GlobalStyles></GlobalStyles>
+          <Title />
+          <Toggles />
+          {data ? (
+            <>
+              <Statistics data={data} />
+              {/* //TODO: Toggle regions */}
+              {data.regions && <Regions regions={data.regions} />}
+            </>
+          ) : (
+            <Spinner />
+          )}
+        </ThemeProvider>
+      </I18nProvider>
     </AppContext.Provider>
   );
 }

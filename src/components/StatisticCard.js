@@ -1,9 +1,12 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
+import { KEYS } from '../i18n';
 
-function StatisticCard({ number, word }) {
+function StatisticCard({ number, stats }) {
   return (
     <div>
-      The number of {word} cases: {number}
+      <FormattedMessage id={KEYS[`STATUS_${stats}`]}></FormattedMessage>:{' '}
+      {number}
     </div>
   );
 }

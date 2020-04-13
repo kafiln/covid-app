@@ -1,32 +1,24 @@
 import React from 'react';
+import { FormattedDate, FormattedMessage } from 'react-intl';
 import { StatisticCard } from '.';
+import { KEYS } from '../i18n';
+
 function Statistics({
   data: { lastUpdate, recovered, deaths, confirmed, negatives },
 }) {
   return (
-    <div className="cards-container">
-      <h1>Statistics</h1>
-      <h2>From the last update on {new Date(lastUpdate).toDateString()}</h2>
-      <StatisticCard
-        word="recovered"
-        number={recovered}
-        image="recovered"
-      ></StatisticCard>
-      <StatisticCard
-        word="deaths"
-        image="deaths"
-        number={deaths}
-      ></StatisticCard>
-      <StatisticCard
-        word="confirmed"
-        image="confirmed"
-        number={confirmed}
-      ></StatisticCard>
-      <StatisticCard
-        word="negatives"
-        image="negatives"
-        number={negatives}
-      ></StatisticCard>
+    <div>
+      <h1>
+        <FormattedMessage id={KEYS.STATISTICS}></FormattedMessage>
+      </h1>
+      <h2>
+        <FormattedMessage id={KEYS.LAST_UPDATED}></FormattedMessage>
+        <FormattedDate value={new Date(lastUpdate)}></FormattedDate>
+      </h2>
+      <StatisticCard stats="RECOVERED" number={recovered}></StatisticCard>
+      <StatisticCard stats="DEATHS" number={deaths}></StatisticCard>
+      <StatisticCard stats="CONFIRMED" number={confirmed}></StatisticCard>
+      <StatisticCard stats="NEGATIVES" number={negatives}></StatisticCard>
     </div>
   );
 }
