@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { AppContext, Types } from '../context';
 import { Toggle } from './common';
 
 function ThemeToggle() {
-  const [checked, setChecked] = useState(false);
+  const { theme, dispatch } = useContext(AppContext);
   const handleChange = () => {
-    setChecked(!checked);
+    dispatch({
+      type: Types.CHANGE_THEME,
+    });
   };
   return (
     <div>
       Dark
-      <Toggle checked={checked} onChange={handleChange} />
+      <Toggle checked={theme === 'light'} onChange={handleChange} />
       Light
     </div>
   );
