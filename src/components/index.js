@@ -5,7 +5,6 @@ import StatisticCard from './StatisticCard';
 import Statistics from './Statistics';
 import ThemeToggle from './ThemeToggle';
 import Title from './Title';
-import Toggles from './Toggles';
 
 export {
   Regions,
@@ -13,7 +12,6 @@ export {
   Statistics,
   StatisticCard,
   Title,
-  Toggles,
   LanguageToggle,
   ThemeToggle,
 };

@@ -1,4 +1,4 @@
 export default {
-  color: 'white',
-  backgroundColor: 'black',
+  color: '#FFF',
+  backgroundColor: '#292c35',
 };

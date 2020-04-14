@@ -9,6 +9,7 @@ const Global = createGlobalStyle`
     box-sizing: border-box;
 }
 body {
+  transition: all .5s ease;
   background-color: ${(props) => props.theme.backgroundColor};
   color: ${(props) => props.theme.color};
   direction: ${(props) => (props.lang === 'ar-ma' ? 'rtl' : 'ltr')};

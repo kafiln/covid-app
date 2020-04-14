@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { AppContext, Types } from '../context';
-import { Toggle } from './common';
 
 function LanguageToggle() {
   const { lang, dispatch } = useContext(AppContext);
@@ -10,11 +9,9 @@ function LanguageToggle() {
     });
   };
   return (
-    <div>
-      Français
-      <Toggle checked={lang === 'ar-ma'} onChange={handleChange} />
-      Arabic
-    </div>
+    <button className="p-1 mb-2 border border-white-500" onClick={handleChange}>
+      <p>{lang === 'ar-ma' ? 'Français' : 'Arabe'}</p>
+    </button>
   );
 }
 

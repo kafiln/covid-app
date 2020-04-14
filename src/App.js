@@ -1,7 +1,13 @@
 import React, { useEffect, useReducer, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { getData } from './api';
-import { Regions, Statistics, Title, Toggles } from './components';
+import {
+  Regions,
+  Statistics,
+  Title,
+  ThemeToggle,
+  LanguageToggle,
+} from './components';
 import { Spinner } from './components/common';
 import { AppContext, AppReducer, initialState } from './context';
 import { I18nProvider } from './i18n';
@@ -21,7 +27,8 @@ function App() {
         <ThemeProvider theme={state.theme === 'light' ? light : dark}>
           <GlobalStyles></GlobalStyles>
           <Title />
-          <Toggles />
+          <LanguageToggle />
+          <ThemeToggle byDefault="light" />
           {data ? (
             <>
               <Statistics data={data} />
