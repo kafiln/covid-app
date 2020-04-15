@@ -10,10 +10,10 @@ export default {
     [KEYS.LAST_UPDATED]: 'اخر تحديث',
 
     // [KEYS.NUMBER_OF_CASES]: 'عدد حالات',
-    [KEYS.STATUS_RECOVERED]: 'عدد حالات الشفاء',
-    [KEYS.STATUS_DEATHS]: 'عدد حالات الموت',
-    [KEYS.STATUS_CONFIRMED]: 'عدد الحالات المؤكدة',
-    [KEYS.STATUS_NEGATIVES]: 'عدد الحالات السلبية',
+    [KEYS.STATUS_RECOVERED]: 'حالات الشفاء',
+    [KEYS.STATUS_DEATHS]: 'حالات الموت',
+    [KEYS.STATUS_CONFIRMED]: 'الحالات المؤكدة',
+    [KEYS.STATUS_NEGATIVES]: 'الحالات السلبية',
 
     [KEYS.STATISTICS_BY_REGION]: 'إحصائيات حسب الجهات',
 

@@ -4,13 +4,12 @@ export default {
   [LOCALES.FRENCH]: {
     ...KEYS,
     [KEYS.TITLE]: 'Traqueur de COVID-19',
-    [KEYS.SUBTITLE]:
-      "Suivre la propagation de l'épidémie de Coronavirus Covid-19",
+    [KEYS.SUBTITLE]: "Suivre la propagation de l'épidémie au Maroc",
     [KEYS.STATISTICS]: 'Statistiques',
-    [KEYS.STATUS_RECOVERED]: 'Nombre de cas guéris',
-    [KEYS.STATUS_DEATHS]: 'Nombre de cas de mort',
-    [KEYS.STATUS_CONFIRMED]: 'Nombre de cas confirmés',
-    [KEYS.STATUS_NEGATIVES]: 'Nombre de cas négatifs',
+    [KEYS.STATUS_RECOVERED]: 'Cas guéris',
+    [KEYS.STATUS_DEATHS]: 'Cas de mort',
+    [KEYS.STATUS_CONFIRMED]: 'Cas confirmés',
+    [KEYS.STATUS_NEGATIVES]: 'Cas négatifs',
     [KEYS.STATISTICS_BY_REGION]: 'Statistiques par régions',
     // REGIONS
     [KEYS.REGIONS_BeniMellalKhénifra]: 'Béni Mellal-Khénifra',
