@@ -7,8 +7,8 @@ function Statistics({
   data: { lastUpdate, recovered, deaths, confirmed, negatives },
 }) {
   return (
-    <div>
-      <h1>
+    <div className="mt-2">
+      <h1 className="text">
         <FormattedMessage id={KEYS.STATISTICS}></FormattedMessage>
       </h1>
       <h2>
