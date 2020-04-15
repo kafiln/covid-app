@@ -11,13 +11,13 @@ function LanguageToggle() {
   };
   return (
     <div
-      className="flex p-0 border rounded border-white-500 .justify-center	 items-center"
+      className="cursor-pointer w-24 flex p-0 border rounded border-white-500 justify-between	 items-center"
       onClick={handleChange}
     >
-      <p className="text-sm ml-2">
+      <p className="text-sm ml-2 flex-1">
         {lang === 'ar-ma' ? 'Français' : 'العربية'}
       </p>
-      <MdLanguage className="mx-1" size="2em" />
+      <MdLanguage className="mx-1" size="1.5em" />
     </div>
   );
 }
