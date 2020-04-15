@@ -17,10 +17,13 @@
   "scripts": {
     "prestart": "npm run watch:css",
     "start": "react-scripts start",
-    "prebuild": "npm run watch:css",
+    "prebuild": "npm run build:css",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "format": "prettier --write src/**/*.{js,jsx,ts,tsx}",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
     "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css"
   },
@@ -41,7 +44,9 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.7.6",
+    "gh-pages": "^2.2.0",
     "postcss-cli": "^7.1.0",
+    "prettier": "^2.0.4",
     "tailwindcss": "^1.2.0"
   }
 }

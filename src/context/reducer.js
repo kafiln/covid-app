@@ -1,4 +1,5 @@
-import { CHANGE_LANGUAGE, CHANGE_THEME } from './types';
+import Types from './types';
+const { CHANGE_LANGUAGE, CHANGE_THEME } = Types;
 
 const LANGUAGES = ['ar-ma', 'fr-fr'];
 const THEMES = ['dark', 'light'];

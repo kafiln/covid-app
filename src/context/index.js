@@ -1,5 +1,3 @@
-import AppContext, { initialState } from './context';
-import AppReducer from './reducer';
-import * as Types from './types';
-
-export { AppContext, AppReducer, initialState, Types };
+export { default as AppContext, initialState } from './context';
+export { default as AppReducer } from './reducer';
+export { default as Types } from './types';

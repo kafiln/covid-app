@@ -1,4 +1,2 @@
-import Spinner from './Spinner';
-import Toggle from './Toggle';
-
-export { Spinner, Toggle };
+export { default as Spinner } from './Spinner';
+export { default as Toggle } from './Toggle';
