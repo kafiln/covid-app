@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+  - 'stable'
+cache:
+  directories:
+    - node_modules
+branches:
+  only:
+    - master
+git:
+  depth: 3
+script:
+  - npm run build
+
+deploy:
+  provider: pages
+  name: Kafil Nasdami
+  email: kafil.nasdami@gmail.com
+  skip_cleanup: true
+  github_token: $github_token
+  local_dir: build
+  on:
+    branch: master
