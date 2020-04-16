@@ -1,8 +1,9 @@
 import React, { useEffect, useReducer, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { getData } from './api';
-import { Footer, Header, Main, Statistics, Title } from './components';
+import { Statistics, Title } from './components';
 import { Spinner } from './components/common';
+import { Layout } from './components/layout';
 import { AppContext, AppReducer, initialState } from './context';
 import { I18nProvider } from './i18n';
 import { dark, GlobalStyles, light } from './theme';
@@ -21,12 +22,10 @@ function App() {
       <I18nProvider locale={state.lang}>
         <ThemeProvider theme={state.theme === 'light' ? light : dark}>
           <GlobalStyles></GlobalStyles>
-          <Main>
-            <Header></Header>
+          <Layout>
             <Title />
             {data ? <Statistics data={data} /> : <Spinner />}
-            <Footer />
-          </Main>
+          </Layout>
         </ThemeProvider>
       </I18nProvider>
     </AppContext.Provider>

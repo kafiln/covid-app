@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import styled from 'styled-components';
+import { AppContext } from '../context';
+
+const Wrapper = styled.main`
+  direction: ${(props) => (props.lang === 'ar-ma' ? 'rtl' : 'ltr')};
+  flex-grow: 1;
+`;
 
 function Main({ children }) {
-  return <div className="container mx-auto p-4 m-b-2">{children}</div>;
+  const context = useContext(AppContext);
+  return <Wrapper lang={context.lang}>{children}</Wrapper>;
 }
 
 export default Main;
