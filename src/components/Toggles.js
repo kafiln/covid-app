@@ -9,7 +9,7 @@ const NoDirectionChange = styled.div`
 
 function Toggles() {
   return (
-    <NoDirectionChange className="mx-auto w-11/12 flex p-2 items-center justify-between bg-aqua">
+    <NoDirectionChange className="flex items-center justify-between bg-aqua">
       <LanguageToggle />
       <ThemeToggle byDefault="light" />
     </NoDirectionChange>

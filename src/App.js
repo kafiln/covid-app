@@ -21,8 +21,8 @@ function App() {
       <I18nProvider locale={state.lang}>
         <ThemeProvider theme={state.theme === 'light' ? light : dark}>
           <GlobalStyles></GlobalStyles>
-          <Toggles></Toggles>
           <Main>
+            <Toggles></Toggles>
             <Title />
             {data ? <Statistics data={data} /> : <Spinner />}
           </Main>

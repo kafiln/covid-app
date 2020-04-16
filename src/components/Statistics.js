@@ -5,7 +5,7 @@ function Statistics({
   data: { lastUpdate, recovered, deaths, confirmed, negatives },
 }) {
   return (
-    <div className="mt-2 flex flex-wrap overflow-hidden">
+    <div className="flex flex-wrap -mx-2">
       {/* <h1 className="text">
         <FormattedMessage id={KEYS.STATISTICS}></FormattedMessage>
       </h1>
