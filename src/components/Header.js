@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import LanguageToggle from './LanguageToggle';
 import ThemeToggle from './ThemeToggle';
 
-const NoDirectionChange = styled.div`
+const NoDirectionChange = styled.header`
   direction: ltr;
 `;
 
-function Toggles() {
+function Header() {
   return (
     <NoDirectionChange className="flex items-center justify-between bg-aqua">
       <LanguageToggle />
@@ -16,4 +16,4 @@ function Toggles() {
   );
 }
 
-export default Toggles;
+export default Header;

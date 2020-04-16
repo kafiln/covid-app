@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { getData } from './api';
-import { Main, Statistics, Title, Toggles } from './components';
+import { Footer, Header, Main, Statistics, Title } from './components';
 import { Spinner } from './components/common';
 import { AppContext, AppReducer, initialState } from './context';
 import { I18nProvider } from './i18n';
@@ -22,9 +22,10 @@ function App() {
         <ThemeProvider theme={state.theme === 'light' ? light : dark}>
           <GlobalStyles></GlobalStyles>
           <Main>
-            <Toggles></Toggles>
+            <Header></Header>
             <Title />
             {data ? <Statistics data={data} /> : <Spinner />}
+            <Footer />
           </Main>
         </ThemeProvider>
       </I18nProvider>
