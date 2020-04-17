@@ -4,4 +4,5 @@ export default {
   statisticCard: {
     container: 'bg-blue-800 text-gray-300',
   },
+  githubButton: ' bg-black text-white border-white',
 };

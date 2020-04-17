@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { getData } from './api';
-import { Statistics, Title } from './components';
+import { Regions, Statistics, Title } from './components';
 import { Spinner } from './components/common';
 import { Layout } from './components/layout';
 import { AppContext, AppReducer, initialState } from './context';
@@ -25,6 +25,7 @@ function App() {
           <Layout>
             <Title />
             {data ? <Statistics data={data} /> : <Spinner />}
+            {data && data.regions && <Regions regions={data.regions}></Regions>}
           </Layout>
         </ThemeProvider>
       </I18nProvider>

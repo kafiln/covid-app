@@ -22,7 +22,7 @@ const getFaIcon = (name) => {
 function SocialItem({ social: { name, url } }) {
   return (
     <div className="flex-grow-1 mx-2 my-1  rounded-full p-1">
-      <a target="_blank" href={url}>
+      <a rel="noopener noreferrer" target="_blank" href={url}>
         {getFaIcon(name)}
       </a>
     </div>
