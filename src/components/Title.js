@@ -6,14 +6,14 @@ const Title = () => {
   return (
     <div className="py-8">
       <h1 className="text-4xl mb-2  font-bold">
-        <FormattedMessage id={KEYS.TITLE}></FormattedMessage>
-        {/* <span className="" role="img" aria-label="Virus">
+        <span className="mx-1" role="img" aria-label="Virus">
           🦠
-        </span> */}
+        </span>
+        <FormattedMessage id={KEYS.TITLE}></FormattedMessage>
       </h1>
-      <p className="text-lg text-gray-500">
+      {/* <p className="text-lg text-gray-500">
         <FormattedMessage id={KEYS.SUBTITLE}></FormattedMessage>
-      </p>
+      </p> */}
     </div>
   );
 };

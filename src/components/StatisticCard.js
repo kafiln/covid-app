@@ -36,7 +36,7 @@ function StatisticCard({ number, stats }) {
             ></FormattedMessage>
           </h2>
           <h3 className="text-4xl font-bold">{number}</h3>
-          <p>
+          {/* <p>
             <FormattedMessage
               id={KEYS.INCREASE_FROM_YESTERDAY}
               values={{
@@ -45,7 +45,7 @@ function StatisticCard({ number, stats }) {
                 type: <FormattedMessage id={KEYS.INCREASE} />,
               }}
             ></FormattedMessage>
-          </p>
+          </p> */}
         </div>
         <div>
           <img src={stringToImg(stats)} alt={stats} />

@@ -5,4 +5,8 @@ export default {
     container: 'bg-gray-300',
   },
   githubButton: ' bg-white text-black border-black',
+  regions: {
+    header: 'bg-gray-100 ',
+    cell: 'bg-gray-200 ',
+  },
 };

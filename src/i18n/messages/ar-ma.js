@@ -18,6 +18,8 @@ export default {
     [KEYS.STATISTICS_BY_REGION]: 'إحصائيات حسب الجهات',
 
     // REGIONS
+    [KEYS.REGIONS_CASES]: 'الحالات',
+    [KEYS.REGIONS_NAME]: 'الجهة',
     [KEYS.REGIONS_BeniMellalKhénifra]: 'بني ملال - خنيفرة',
     [KEYS.REGIONS_CasaSettat]: 'الدار البيضاء - سطات',
     [KEYS.REGIONS_MarrakechSafi]: ' مراكش - آسفي',

@@ -9,6 +9,8 @@ export default {
   STATUS_NEGATIVES: 'STATUS_NEGATIVES',
   STATISTICS_BY_REGION: 'STATISTICS_BY_REGION',
   // REGIONS
+  REGIONS_CASES: 'REGIONS_CASES',
+  REGIONS_NAME: 'REGIONS_NAME',
   REGIONS_BeniMellalKhénifra: 'REGIONS_BeniMellalKhénifra',
   REGIONS_CasaSettat: 'REGIONS_CasaSettat',
   REGIONS_MarrakechSafi: 'REGIONS_MarrakechSafi',
