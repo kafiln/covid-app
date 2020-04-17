@@ -7,7 +7,7 @@ export default {
     [KEYS.TITLE]: 'تعقب حالة فيروس كورونا',
     [KEYS.SUBTITLE]: 'تتبع تطورانتشار فيروس كورونا في المغرب',
     [KEYS.STATISTICS]: 'الإحصائيات',
-    [KEYS.LAST_UPDATED]: 'اخر تحديث',
+    [KEYS.LAST_UPDATED]: ' اخر تحديث يوم {day} على الساعة {hour}',
 
     // [KEYS.NUMBER_OF_CASES]: 'عدد حالات',
     [KEYS.STATUS_RECOVERED]: 'حالات الشفاء',
@@ -32,8 +32,9 @@ export default {
     [KEYS.REGIONS_GuelmimOuedNoun]: 'كلميم - واد نون',
 
     [KEYS.INCREASE]: 'زيادة',
-    [KEYS.INCREASE_FROM_YESTERDAY]: 'زيادة منذ أمس',
-
+    [KEYS.DECREASE]: 'زيادة',
+    [KEYS.INCREASE_FROM_YESTERDAY]:
+      '{percentage}  {type} منذ الأمس ({number})    ',
     [KEYS.LIGHT]: 'لون فاتح',
     [KEYS.DARK]: 'لون غامق',
     [KEYS.SPINNER_LOADING]: 'جار التحميل ...',

@@ -4,8 +4,8 @@ import { Region } from '.';
 import { KEYS } from '../i18n';
 function Regions({ regions }) {
   return (
-    <article>
-      <h1>
+    <article className="py-4">
+      <h1 className="py-2 font-bold text-3xl">
         <FormattedMessage id={KEYS.STATISTICS_BY_REGION}></FormattedMessage>
       </h1>
       <div className="regions">
