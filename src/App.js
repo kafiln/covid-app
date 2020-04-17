@@ -23,7 +23,7 @@ function App() {
         <ThemeProvider theme={state.theme === 'light' ? light : dark}>
           <GlobalStyles></GlobalStyles>
           <Layout>
-            <Title />
+            {data && <Title lastUpdate={data.lastUpdate} />}
             {data ? <Statistics data={data} /> : <Spinner />}
             {data && data.regions && <Regions regions={data.regions}></Regions>}
           </Layout>

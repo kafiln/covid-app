@@ -1,6 +1,7 @@
 export { default as Footer } from './Footer';
 export { default as Header } from './Header';
 export { default as LanguageToggle } from './LanguageToggle';
+export { default as LastUpdate } from './LastUpdate';
 export { default as Main } from './Main';
 export { default as Regions } from './Regions.js';
 export { default as SocialItem } from './SocialItem';

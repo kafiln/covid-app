@@ -6,7 +6,7 @@ export default {
 
     [KEYS.TITLE]: 'تعقب حالة فيروس كورونا',
     [KEYS.SUBTITLE]: 'تتبع تطورانتشار فيروس كورونا في المغرب',
-    [KEYS.STATISTICS]: 'الإحصائيات',
+    [KEYS.STATISTICS]: ' الإحصائيات العامة',
     [KEYS.LAST_UPDATED]: ' اخر تحديث يوم {day} على الساعة {hour}',
 
     // [KEYS.NUMBER_OF_CASES]: 'عدد حالات',
@@ -15,7 +15,7 @@ export default {
     [KEYS.STATUS_CONFIRMED]: 'الحالات المؤكدة',
     [KEYS.STATUS_NEGATIVES]: 'الحالات السلبية',
 
-    [KEYS.STATISTICS_BY_REGION]: 'إحصائيات حسب الجهات',
+    [KEYS.STATISTICS_BY_REGION]: 'الإحصائيات حسب الجهات',
 
     // REGIONS
     [KEYS.REGIONS_CASES]: 'الحالات',

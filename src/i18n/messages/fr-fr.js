@@ -3,7 +3,7 @@ import KEYS from './keys';
 export default {
   [LOCALES.FRENCH]: {
     ...KEYS,
-    [KEYS.TITLE]: 'Traqueur de COVID-19',
+    [KEYS.TITLE]: 'Suivie Corona',
     [KEYS.SUBTITLE]: "Suivre la propagation de l'épidémie au Maroc",
     [KEYS.STATISTICS]: 'Statistiques globales',
     [KEYS.STATUS_RECOVERED]: 'Cas guéris',
