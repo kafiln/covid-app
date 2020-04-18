@@ -14,7 +14,6 @@ const LastUpdate = ({ lastUpdate }) => {
               year="numeric"
               month="long"
               day="numeric"
-              weekday="long"
             />
           ),
           hour: <FormattedTime value={new Date(lastUpdate)}></FormattedTime>,

@@ -3,6 +3,11 @@ import KEYS from './keys';
 export default {
   [LOCALES.FRENCH]: {
     ...KEYS,
+    //SEO
+    [KEYS.WEBSITE_TITLE]: 'Corona virus au Maroc',
+    [KEYS.LANG]: 'fr',
+    [KEYS.DESCRIPTION]: "Suivre la propagation de l'épidémie au Maroc",
+    //TITLE
     [KEYS.TITLE]: 'Suivi Corona',
     [KEYS.SUBTITLE]: "Suivre la propagation de l'épidémie au Maroc",
     [KEYS.STATISTICS]: 'Statistiques globales',
@@ -10,10 +15,13 @@ export default {
     [KEYS.STATUS_DEATHS]: 'Cas de mort',
     [KEYS.STATUS_CONFIRMED]: 'Cas confirmés',
     [KEYS.STATUS_NEGATIVES]: 'Cas négatifs',
+    [KEYS.STATUS_ACTIVES]: 'Cas actifs',
+    [KEYS.STATUS_TESTED]: 'Tests effectués',
     [KEYS.STATISTICS_BY_REGION]: 'Statistiques par régions',
     // REGIONS
     [KEYS.REGIONS_CASES]: 'Nombre Actuel',
     [KEYS.REGIONS_OLD_CASES]: 'Nombre Précedant',
+    [KEYS.REGIONS_DAILY_CASES]: 'Augmentation journalière',
     [KEYS.REGIONS_PERCENTAGE_CASES]: 'Variation',
     [KEYS.REGIONS_NAME]: 'Région',
     [KEYS.REGIONS_BeniMellalKhénifra]: 'Béni Mellal-Khénifra',

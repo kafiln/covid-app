@@ -26,14 +26,15 @@ function Regions({ regions }) {
         Header: <FormattedMessage id={KEYS.REGIONS_CASES}></FormattedMessage>,
       },
       {
-        accessor: 'old',
+        id: 'difference',
+        accessor: (r) => r.actual - r.old,
         Header: (
-          <FormattedMessage id={KEYS.REGIONS_OLD_CASES}></FormattedMessage>
+          <FormattedMessage id={KEYS.REGIONS_DAILY_CASES}></FormattedMessage>
         ),
       },
       {
         id: 'percentage',
-        accessor: (r) => `${r.percentage}%`,
+        accessor: (r) => `+${r.percentage}%`,
         Header: (
           <FormattedMessage
             id={KEYS.REGIONS_PERCENTAGE_CASES}

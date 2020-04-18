@@ -19,7 +19,7 @@ const stringToImg = (name) => {
     case 'recovered':
       return recovered;
     default:
-      break;
+      return negatives;
   }
 };
 
@@ -28,6 +28,7 @@ const withStatus = (name) => `STATUS_${name.toUpperCase()}`;
 function StatisticCard({ field, stats }) {
   const theme = useContext(ThemeContext);
   const { actual, old, percentage } = field;
+  const diff = actual - old;
   return (
     <div className={`w-full my-2 md:w-1/2  flex-grow`}>
       <div
@@ -37,7 +38,15 @@ function StatisticCard({ field, stats }) {
           <h2 className="text-1xl uppercase">
             <FormattedMessage id={KEYS[withStatus(stats)]}></FormattedMessage>
           </h2>
-          <h3 className="text-4xl font-bold">{actual}</h3>
+          <div className="flex items-center">
+            <div>
+              <h3 className="text-4xl font-bold">{actual}</h3>
+            </div>
+            <div className="mx-3 bg-white p-1 rounded text-sm text-black">
+              {diff > 0 ? '+' : diff < 0 ? '-' : ''}
+              {diff}
+            </div>
+          </div>
           <p>
             <FormattedMessage
               id={KEYS.INCREASE_FROM_YESTERDAY}
