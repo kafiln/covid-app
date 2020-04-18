@@ -7,6 +7,7 @@ import negatives from '../assets/img/negatives.svg';
 import recovered from '../assets/img/recovered.svg';
 import { KEYS } from '../i18n';
 
+//TODO: Search for a better way to achieve this
 const stringToImg = (name) => {
   switch (name) {
     case 'confirmed':
@@ -22,19 +23,19 @@ const stringToImg = (name) => {
   }
 };
 
+const withStatus = (name) => `STATUS_${name.toUpperCase()}`;
+
 function StatisticCard({ field, stats }) {
   const theme = useContext(ThemeContext);
   const { actual, old, percentage } = field;
   return (
-    <div className={`w-full my-2 sm:w-1/2  flex-grow`}>
+    <div className={`w-full my-2 md:w-1/2  flex-grow`}>
       <div
         className={`mx-2 py-6 px-3 h-full ${theme.statisticCard.container} shadow-lg rounded-lg flex`}
       >
         <div className="flex-grow">
           <h2 className="text-1xl uppercase">
-            <FormattedMessage
-              id={KEYS[`STATUS_${stats.toUpperCase()}`]}
-            ></FormattedMessage>
+            <FormattedMessage id={KEYS[withStatus(stats)]}></FormattedMessage>
           </h2>
           <h3 className="text-4xl font-bold">{actual}</h3>
           <p>

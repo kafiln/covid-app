@@ -97,7 +97,7 @@ function Table({ columns, data }) {
             prepareRow(row);
             return (
               <tr
-                className={i % 2 ? theme.regions.header : ''}
+                className={i % 2 ? theme.regions.cell : ''}
                 {...row.getRowProps()}
               >
                 {row.cells.map((cell) => {
