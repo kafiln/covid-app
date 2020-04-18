@@ -5,7 +5,7 @@ import Main from '../Main';
 
 function DefaultLayout({ children }) {
   return (
-    <div className="container mx-auto p-4 m-b-2 flex flex-col min-h-screen">
+    <div className="container mx-auto p-1 m-b-2 flex flex-col min-h-screen">
       <Header></Header>
       <Main>{children}</Main>
       <Footer />

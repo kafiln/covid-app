@@ -21,10 +21,24 @@ function Regions({ regions }) {
         id: 'name',
         Header: <FormattedMessage id={KEYS.REGIONS_NAME}></FormattedMessage>,
       },
-
       {
-        accessor: 'value',
+        accessor: 'actual',
         Header: <FormattedMessage id={KEYS.REGIONS_CASES}></FormattedMessage>,
+      },
+      {
+        accessor: 'old',
+        Header: (
+          <FormattedMessage id={KEYS.REGIONS_OLD_CASES}></FormattedMessage>
+        ),
+      },
+      {
+        id: 'percentage',
+        accessor: (r) => `${r.percentage}%`,
+        Header: (
+          <FormattedMessage
+            id={KEYS.REGIONS_PERCENTAGE_CASES}
+          ></FormattedMessage>
+        ),
       },
     ],
     []

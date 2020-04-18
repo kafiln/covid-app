@@ -18,7 +18,9 @@ export default {
     [KEYS.STATISTICS_BY_REGION]: 'الإحصائيات حسب الجهات',
 
     // REGIONS
-    [KEYS.REGIONS_CASES]: 'الحالات',
+    [KEYS.REGIONS_CASES]: 'الرقم الحالي',
+    [KEYS.REGIONS_OLD_CASES]: 'الرقم السابق',
+    [KEYS.REGIONS_PERCENTAGE_CASES]: 'نسبة التغير',
     [KEYS.REGIONS_NAME]: 'الجهة',
     [KEYS.REGIONS_BeniMellalKhénifra]: 'بني ملال - خنيفرة',
     [KEYS.REGIONS_CasaSettat]: 'الدار البيضاء - سطات',

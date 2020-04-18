@@ -3,7 +3,7 @@ import KEYS from './keys';
 export default {
   [LOCALES.FRENCH]: {
     ...KEYS,
-    [KEYS.TITLE]: 'Suivie Corona',
+    [KEYS.TITLE]: 'Suivi Corona',
     [KEYS.SUBTITLE]: "Suivre la propagation de l'épidémie au Maroc",
     [KEYS.STATISTICS]: 'Statistiques globales',
     [KEYS.STATUS_RECOVERED]: 'Cas guéris',
@@ -12,7 +12,9 @@ export default {
     [KEYS.STATUS_NEGATIVES]: 'Cas négatifs',
     [KEYS.STATISTICS_BY_REGION]: 'Statistiques par régions',
     // REGIONS
-    [KEYS.REGIONS_CASES]: 'Nombre',
+    [KEYS.REGIONS_CASES]: 'Nombre Actuel',
+    [KEYS.REGIONS_OLD_CASES]: 'Nombre Précedant',
+    [KEYS.REGIONS_PERCENTAGE_CASES]: 'Variation',
     [KEYS.REGIONS_NAME]: 'Région',
     [KEYS.REGIONS_BeniMellalKhénifra]: 'Béni Mellal-Khénifra',
     [KEYS.REGIONS_CasaSettat]: 'Casablanca-Settat',

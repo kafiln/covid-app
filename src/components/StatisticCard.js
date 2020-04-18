@@ -22,12 +22,13 @@ const stringToImg = (name) => {
   }
 };
 
-function StatisticCard({ number, stats }) {
+function StatisticCard({ field, stats }) {
   const theme = useContext(ThemeContext);
+  const { actual, old, percentage } = field;
   return (
     <div className={`w-full my-2 sm:w-1/2  flex-grow`}>
       <div
-        className={`mx-2 py-6 px-3  ${theme.statisticCard.container} shadow-lg rounded-lg flex`}
+        className={`mx-2 py-6 px-3 h-full ${theme.statisticCard.container} shadow-lg rounded-lg flex`}
       >
         <div className="flex-grow">
           <h2 className="text-1xl uppercase">
@@ -35,17 +36,17 @@ function StatisticCard({ number, stats }) {
               id={KEYS[`STATUS_${stats.toUpperCase()}`]}
             ></FormattedMessage>
           </h2>
-          <h3 className="text-4xl font-bold">{number}</h3>
-          {/* <p>
+          <h3 className="text-4xl font-bold">{actual}</h3>
+          <p>
             <FormattedMessage
               id={KEYS.INCREASE_FROM_YESTERDAY}
               values={{
-                number: 23,
-                percentage: '32%',
+                number: old,
+                percentage: `${percentage}%`,
                 type: <FormattedMessage id={KEYS.INCREASE} />,
               }}
             ></FormattedMessage>
-          </p> */}
+          </p>
         </div>
         <div>
           <img src={stringToImg(stats)} alt={stats} />

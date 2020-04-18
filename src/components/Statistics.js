@@ -13,10 +13,10 @@ function Statistics({
       </h1>
       {/* <LastUpdate lastUpdate={lastUpdate}></LastUpdate> */}
       <div className="flex flex-wrap -mx-2">
-        <StatisticCard stats="confirmed" number={confirmed}></StatisticCard>
-        <StatisticCard stats="recovered" number={recovered}></StatisticCard>
-        <StatisticCard stats="deaths" number={deaths}></StatisticCard>
-        <StatisticCard stats="negatives" number={negatives}></StatisticCard>
+        <StatisticCard stats="confirmed" field={confirmed}></StatisticCard>
+        <StatisticCard stats="recovered" field={recovered}></StatisticCard>
+        <StatisticCard stats="deaths" field={deaths}></StatisticCard>
+        <StatisticCard stats="negatives" field={negatives}></StatisticCard>
       </div>
     </article>
   );
