@@ -1,7 +1,7 @@
 import LOCALES from '../locales';
 import KEYS from './keys';
 export default {
-  [LOCALES.ENGLISH.ID]: {
+  [LOCALES.ENGLISH.id]: {
     ...KEYS,
     //SEO
     [KEYS.WEBSITE_TITLE]: 'Corona virus in Morocco',

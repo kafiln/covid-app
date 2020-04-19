@@ -1,5 +1,5 @@
 export default {
-  ARABIC: { ID: 'ar-ma', displayName: 'العربية' },
-  FRENCH: { ID: 'fr-fr', displayName: 'Francais' },
-  ENGLISH: { ID: 'en-en', displayName: 'English' },
+  ARABIC: { id: 'ar-ma', displayName: 'العربية' },
+  FRENCH: { id: 'fr-fr', displayName: 'Francais' },
+  ENGLISH: { id: 'en-en', displayName: 'English' },
 };

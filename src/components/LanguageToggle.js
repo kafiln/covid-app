@@ -19,7 +19,7 @@ function LanguageToggle() {
 
   //getting the current language displayName based on it's ID
   const currentLang =
-    languages.filter((l) => l.ID === lang)[0].displayName || 'fr-fr';
+    languages.filter((l) => l.id === lang)[0].displayName || 'fr-fr';
 
   const handleChange = (langID) => {
     dispatch({
@@ -37,8 +37,8 @@ function LanguageToggle() {
         {languages &&
           languages.map((language) => (
             <li
-              onClick={(_) => handleChange(language.ID)}
-              key={language.ID}
+              onClick={(_) => handleChange(language.id)}
+              key={language.id}
               className=""
             >
               <span className="cursor-pointer rounded-b bg-gray-300 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">
