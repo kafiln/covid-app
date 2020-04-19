@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { MdLanguage } from 'react-icons/md';
 import { AppContext, Types } from '../context';
-import { LanguagesContext } from '../i18n';
 import styled from 'styled-components';
 
 const Dropdown = styled.div`
