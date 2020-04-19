@@ -1,4 +1,4 @@
-import React, { Fragment, createContext } from 'react';
+import React, { Fragment } from 'react';
 import { IntlProvider } from 'react-intl';
 import messages from './messages';
 
