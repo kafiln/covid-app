@@ -1,7 +1,7 @@
 import LOCALES from '../locales';
 import KEYS from './keys';
 export default {
-  [LOCALES.ARABIC]: {
+  [LOCALES.ARABIC.ID]: {
     ...KEYS,
 
     //SEO

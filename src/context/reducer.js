@@ -1,7 +1,6 @@
 import Types from './types';
 const { CHANGE_LANGUAGE, CHANGE_THEME } = Types;
 
-const LANGUAGES = ['ar-ma', 'fr-fr'];
 const THEMES = ['dark', 'light'];
 
 const toggleValue = (value, choices) => {
@@ -12,7 +11,7 @@ const toggleValue = (value, choices) => {
 export default (state, action) => {
   switch (action.type) {
     case CHANGE_LANGUAGE:
-      const lang = toggleValue(state.lang, LANGUAGES);
+      const lang = action.payload;
       localStorage.setItem('lang', lang);
       return {
         ...state,

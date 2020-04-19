@@ -6,6 +6,7 @@ import { Spinner } from './components/common';
 import { Layout } from './components/layout';
 import { AppContext, AppReducer, initialState } from './context';
 import { I18nProvider } from './i18n';
+import { LanguagesProvider } from './i18n';
 import { dark, GlobalStyles, light } from './theme';
 function App() {
   const [data, setData] = useState(null);
@@ -19,16 +20,20 @@ function App() {
 
   return (
     <AppContext.Provider value={{ ...state, dispatch }}>
-      <I18nProvider locale={state.lang}>
-        <ThemeProvider theme={state.theme === 'light' ? light : dark}>
-          <GlobalStyles></GlobalStyles>
-          <Layout>
-            {data && <Title lastUpdate={data.lastUpdate} />}
-            {data ? <Statistics data={data} /> : <Spinner />}
-            {data && data.regions && <Regions regions={data.regions}></Regions>}
-          </Layout>
-        </ThemeProvider>
-      </I18nProvider>
+      <LanguagesProvider>
+        <I18nProvider locale={state.lang}>
+          <ThemeProvider theme={state.theme === 'light' ? light : dark}>
+            <GlobalStyles></GlobalStyles>
+            <Layout>
+              {data && <Title lastUpdate={data.lastUpdate} />}
+              {data ? <Statistics data={data} /> : <Spinner />}
+              {data && data.regions && (
+                <Regions regions={data.regions}></Regions>
+              )}
+            </Layout>
+          </ThemeProvider>
+        </I18nProvider>
+      </LanguagesProvider>
     </AppContext.Provider>
   );
 }
