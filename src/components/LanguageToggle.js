@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { MdLanguage } from 'react-icons/md';
 import { AppContext, Types } from '../context';
+import LOCALES from '../i18n/locales';
 import styled from 'styled-components';
 
 const Dropdown = styled.div`
@@ -13,7 +14,8 @@ const Dropdown = styled.div`
 `;
 
 function LanguageToggle() {
-  const { lang, languages, dispatch } = useContext(AppContext);
+  const { lang, dispatch } = useContext(AppContext);
+  const languages = Object.values(LOCALES);
 
   //getting the current language displayName based on it's ID
   const currentLang =
