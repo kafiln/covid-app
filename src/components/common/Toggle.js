@@ -1,7 +1,6 @@
 import React from 'react';
-import Switch from 'react-switch';
-
 import { FaMoon, FaSun } from 'react-icons/fa';
+import Switch from 'react-switch';
 
 const styles = {
   display: 'flex',
@@ -16,6 +15,8 @@ function Toggle({ checked, onChange }) {
       <Switch
         onColor={'#000'}
         offColor={'#000'}
+        aria-label="toggle between dark and light theme"
+        aria-checked={checked}
         width={64}
         height={32}
         uncheckedIcon={

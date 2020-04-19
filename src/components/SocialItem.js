@@ -23,6 +23,7 @@ function SocialItem({ social: { name, url } }) {
   return (
     <div className="flex-grow-1 mx-2 my-1  rounded-full p-1">
       <a rel="noopener noreferrer" target="_blank" href={url}>
+        <span className="opacity-0">{name}</span>
         {getFaIcon(name)}
       </a>
     </div>
