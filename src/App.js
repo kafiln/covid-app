@@ -20,20 +20,16 @@ function App() {
 
   return (
     <AppContext.Provider value={{ ...state, dispatch }}>
-      <LanguagesProvider>
-        <I18nProvider locale={state.lang}>
-          <ThemeProvider theme={state.theme === 'light' ? light : dark}>
-            <GlobalStyles></GlobalStyles>
-            <Layout>
-              {data && <Title lastUpdate={data.lastUpdate} />}
-              {data ? <Statistics data={data} /> : <Spinner />}
-              {data && data.regions && (
-                <Regions regions={data.regions}></Regions>
-              )}
-            </Layout>
-          </ThemeProvider>
-        </I18nProvider>
-      </LanguagesProvider>
+      <I18nProvider locale={state.lang}>
+        <ThemeProvider theme={state.theme === 'light' ? light : dark}>
+          <GlobalStyles></GlobalStyles>
+          <Layout>
+            {data && <Title lastUpdate={data.lastUpdate} />}
+            {data ? <Statistics data={data} /> : <Spinner />}
+            {data && data.regions && <Regions regions={data.regions}></Regions>}
+          </Layout>
+        </ThemeProvider>
+      </I18nProvider>
     </AppContext.Provider>
   );
 }

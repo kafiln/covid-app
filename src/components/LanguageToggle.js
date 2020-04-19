@@ -14,8 +14,9 @@ const Dropdown = styled.div`
 `;
 
 function LanguageToggle() {
-  const { lang, dispatch } = useContext(AppContext);
-  const { languages } = useContext(LanguagesContext);
+  const { lang, languages, dispatch } = useContext(AppContext);
+
+  //getting the current language displayName based on it's ID
   const currentLang =
     languages.filter((l) => l.ID === lang)[0].displayName || 'fr-fr';
 
