@@ -13,5 +13,4 @@ const Provider = ({ children, locale = 'fr-fr' }) => {
     </IntlProvider>
   );
 };
-
 export default Provider;
