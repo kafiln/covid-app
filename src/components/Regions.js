@@ -1,9 +1,9 @@
-import React, { useContext, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { FaArrowsAltV } from 'react-icons/fa';
 import { GoTriangleDown, GoTriangleUp } from 'react-icons/go';
 import { FormattedMessage } from 'react-intl';
 import { useSortBy, useTable } from 'react-table';
-import { ThemeContext } from 'styled-components';
+import { useTheme } from 'styled-components';
 import { KEYS } from '../i18n';
 // TODO: Extract it in utils
 const stringTovariableName = (prefix, name) =>
@@ -76,7 +76,7 @@ const getArrow = (column, props) => {
 };
 
 function Table({ columns, data }) {
-  const theme = useContext(ThemeContext);
+  const theme = useTheme();
   const {
     getTableProps,
     getTableBodyProps,

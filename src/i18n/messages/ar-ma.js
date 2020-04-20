@@ -7,6 +7,7 @@ export default {
     //SEO
     [KEYS.WEBSITE_TITLE]: 'تعقب حالة فيروس كورونا',
     [KEYS.LANG]: 'ar',
+    [KEYS.LANGUAGES]: 'اللغات',
     [KEYS.DESCRIPTION]: 'تتبع تطورانتشار فيروس كورونا في المغرب',
     //TITLE
 
@@ -26,7 +27,7 @@ export default {
     [KEYS.STATISTICS_BY_REGION]: 'إحصائيات حالات الإصابة حسب الجهات',
 
     // REGIONS
-    [KEYS.REGIONS_CASES]: 'الحالات',
+    [KEYS.REGIONS_CASES]: 'الحالات المؤكدة',
     [KEYS.REGIONS_OLD_CASES]: 'الرقم السابق',
     [KEYS.REGIONS_DAILY_CASES]: 'الزيادة اليومية',
     [KEYS.REGIONS_PERCENTAGE_CASES]: 'نسبة التغير',

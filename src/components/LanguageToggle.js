@@ -1,52 +1,75 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { MdLanguage } from 'react-icons/md';
+import { FormattedMessage } from 'react-intl';
+import styled, { useTheme } from 'styled-components';
 import { AppContext, Types } from '../context';
-import LOCALES from '../i18n/locales';
-import styled from 'styled-components';
+import { KEYS, Languages as LOCALES } from '../i18n';
 
 const Dropdown = styled.div`
   font: 400 16px system-ui;
-  &:hover {
-    .dropdown-menu {
-      display: block;
-    }
+  color: ${(props) => props.backgroundColor};
+  background-color: ${(props) => props.color};
+
+  .menu {
+    color: ${(props) => props.backgroundColor};
+    background-color: ${(props) => props.color};
   }
 `;
 
 function LanguageToggle() {
   const { lang, dispatch } = useContext(AppContext);
+  const { color, backgroundColor } = useTheme();
+  const [hidden, setHidden] = useState(true);
   const languages = Object.values(LOCALES);
 
-  //getting the current language displayName based on it's ID
-  const currentLang =
-    languages.filter((l) => l.id === lang)[0].displayName || 'fr-fr';
+  const toggle = () => {
+    setHidden(!hidden);
+  };
 
-  const handleChange = (langID) => {
+  const handleChange = (langId) => {
+    toggle();
     dispatch({
       type: Types.CHANGE_LANGUAGE,
-      payload: langID,
+      payload: langId,
     });
   };
   return (
-    <Dropdown className="dropdown inline-block relative ">
-      <button className="bg-gray-300  font-semibold py-2 px-4 rounded inline-flex items-center outline-none">
-        <span className="mr-1">{currentLang}</span>
-        <MdLanguage className="mx-1" size="1.5em" />
-      </button>
-      <ul className="dropdown-menu absolute hidden  pt-1 outline-none">
-        {languages &&
-          languages.map((language) => (
-            <li
-              onClick={(_) => handleChange(language.id)}
-              key={language.id}
-              className=""
-            >
-              <span className="cursor-pointer rounded-b bg-gray-300 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">
-                {language.displayName}
-              </span>
-            </li>
-          ))}
-      </ul>
+    <Dropdown
+      color={color}
+      backgroundColor={backgroundColor}
+      onMouseEnter={() => setHidden(false)}
+      onMouseLeave={() => setHidden(true)}
+      className="dropdown flex flex-col cursor-pointer "
+    >
+      <div className="wrapper">
+        <button className="font-semibold py-2 px-4 inline-flex items-center focus:outline-none">
+          <span className="mr-1">
+            <FormattedMessage id={KEYS.LANGUAGES}></FormattedMessage>
+          </span>
+          <MdLanguage className="mx-1" size="1.5em" />
+        </button>
+      </div>
+
+      <div className="relative">
+        <ul
+          className={`menu pt-1 focus:outline-none absolute top-0 left-0 w-full ${
+            hidden && 'hidden'
+          } `}
+        >
+          {languages &&
+            languages
+              .filter((e) => e.id !== lang)
+              .map((language) => (
+                <li
+                  onClick={() => handleChange(language.id)}
+                  key={language.id}
+                  className={`hover:font-bold py-2 px-4 whitespace-no-wrap`}
+                >
+                  {language.displayName}
+                </li>
+              ))}
+        </ul>
+      </div>
     </Dropdown>
   );
 }

@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import { ThemeContext } from 'styled-components';
+import { useTheme } from 'styled-components';
 import confirmed from '../assets/img/confirmed.svg';
 import deaths from '../assets/img/deaths.svg';
 import negatives from '../assets/img/negatives.svg';
@@ -26,7 +26,7 @@ const stringToImg = (name) => {
 const withStatus = (name) => `STATUS_${name.toUpperCase()}`;
 
 function StatisticCard({ field, stats }) {
-  const theme = useContext(ThemeContext);
+  const theme = useTheme();
   const { actual, old, percentage } = field;
   const diff = actual - old;
   return (
