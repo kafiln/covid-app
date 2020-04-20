@@ -1,9 +1,10 @@
 import React, { useContext, useMemo } from 'react';
+import { FaArrowsAltV } from 'react-icons/fa';
+import { GoTriangleDown, GoTriangleUp } from 'react-icons/go';
 import { FormattedMessage } from 'react-intl';
 import { useSortBy, useTable } from 'react-table';
 import { ThemeContext } from 'styled-components';
 import { KEYS } from '../i18n';
-
 // TODO: Extract it in utils
 const stringTovariableName = (prefix, name) =>
   prefix + name.replace(/\s/g, '').replace(/[-]/g, '');
@@ -19,6 +20,7 @@ function Regions({ regions }) {
           ></FormattedMessage>
         ),
         id: 'name',
+        disableSortBy: true,
         Header: <FormattedMessage id={KEYS.REGIONS_NAME}></FormattedMessage>,
       },
       {
@@ -59,6 +61,20 @@ function Regions({ regions }) {
 
 export default Regions;
 
+const getArrow = (column, props) => {
+  if (column.canSort) {
+    if (column.isSorted) {
+      return column.isSortedDesc ? (
+        <GoTriangleDown {...props} />
+      ) : (
+        <GoTriangleUp {...props} />
+      );
+    }
+    return <FaArrowsAltV {...props} />;
+  }
+  return '';
+};
+
 function Table({ columns, data }) {
   const theme = useContext(ThemeContext);
   const {
@@ -71,6 +87,7 @@ function Table({ columns, data }) {
     {
       columns,
       data,
+      // disableSortRemove: true,
     },
     useSortBy
   );
@@ -83,11 +100,14 @@ function Table({ columns, data }) {
             <tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column) => (
                 <th
-                  className={`p-1 border cursor-pointer ${theme.regions.header}`}
+                  className={`p-1 border ${theme.regions.header} ${
+                    column.canSort && 'cursor-pointer'
+                  }`}
                   {...column.getHeaderProps(column.getSortByToggleProps())}
                   style={{ textAlign: 'start' }}
                 >
                   {column.render('Header')}
+                  {getArrow(column, { className: 'inline mx-1' })}
                 </th>
               ))}
             </tr>
