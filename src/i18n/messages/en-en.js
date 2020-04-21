@@ -13,7 +13,7 @@ export default {
     [KEYS.SUBTITLE]: 'Track the spread of the epidemic in Morocco',
     [KEYS.STATISTICS]: 'Global Statistics',
     [KEYS.STATUS_RECOVERED]: 'Recovered',
-    [KEYS.STATUS_DEATHS]: 'decease',
+    [KEYS.STATUS_DEATHS]: 'deceased',
     [KEYS.STATUS_CONFIRMED]: 'Confirmed',
     [KEYS.STATUS_NEGATIVES]: 'Negative',
     [KEYS.STATUS_ACTIVES]: 'Active',
