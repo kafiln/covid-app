@@ -6,7 +6,7 @@ import LastUpdate from './LastUpdate';
 const Title = ({ lastUpdate }) => {
   return (
     <div className="py-4">
-      <h1 className="text-4xl mb-2  font-bold">
+      <h1 className="text-4xl font-bold">
         <FormattedMessage id={KEYS.TITLE}></FormattedMessage>
       </h1>
       <LastUpdate lastUpdate={lastUpdate}></LastUpdate>

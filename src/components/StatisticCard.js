@@ -25,10 +25,11 @@ const stringToImg = (name) => {
 
 const withStatus = (name) => `STATUS_${name.toUpperCase()}`;
 
-function StatisticCard({ field, stats }) {
+function StatisticCard({ field, stats, inverted }) {
   const theme = useTheme();
   const { actual, old, percentage } = field;
   const diff = actual - old;
+  const isPositif = Math.sign(diff) * (inverted ? 1 : -1);
   return (
     <div className={`w-full my-2 md:w-1/2  flex-grow`}>
       <div
@@ -42,8 +43,12 @@ function StatisticCard({ field, stats }) {
             <div>
               <h3 className="text-4xl font-bold">{actual}</h3>
             </div>
-            <div className="mx-3 bg-white p-1 rounded text-sm text-black">
-              {diff > 0 ? '+' : diff < 0 ? '-' : ''}
+            <div
+              className={`mx-3 ${
+                isPositif > 0 ? 'bg-green-600' : 'bg-red-600'
+              } p-1 rounded text-sm text-white font-bold`}
+            >
+              {diff > 0 ? '+' : ''}
               {diff}
             </div>
           </div>

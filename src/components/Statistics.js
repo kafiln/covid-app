@@ -14,10 +14,18 @@ function Statistics({
       <div className="flex flex-wrap -mx-2">
         <StatisticCard stats="confirmed" field={confirmed}></StatisticCard>
         <StatisticCard stats="actives" field={actives}></StatisticCard>
-        <StatisticCard stats="recovered" field={recovered}></StatisticCard>
+        <StatisticCard
+          inverted
+          stats="recovered"
+          field={recovered}
+        ></StatisticCard>
         <StatisticCard stats="deaths" field={deaths}></StatisticCard>
-        <StatisticCard stats="tested" field={tested}></StatisticCard>
-        <StatisticCard stats="negatives" field={negatives}></StatisticCard>
+        <StatisticCard inverted stats="tested" field={tested}></StatisticCard>
+        <StatisticCard
+          inverted
+          stats="negatives"
+          field={negatives}
+        ></StatisticCard>
       </div>
     </article>
   );

@@ -39,15 +39,15 @@ function LanguageToggle() {
       backgroundColor={backgroundColor}
       onMouseEnter={() => setHidden(false)}
       onMouseLeave={() => setHidden(true)}
-      className="dropdown flex flex-col cursor-pointer "
+      className="dropdown rounded flex flex-col cursor-pointer rounded-b-none"
     >
       <div className="wrapper">
-        <button className="font-semibold py-2 px-4 inline-flex items-center focus:outline-none">
+        <div className="font-semibold py-1 px-2 inline-flex items-center focus:outline-none">
           <span className="mr-1">
             <FormattedMessage id={KEYS.LANGUAGES}></FormattedMessage>
           </span>
-          <MdLanguage className="mx-1" size="1.5em" />
-        </button>
+          <MdLanguage size="1.5em" />
+        </div>
       </div>
 
       <div className="relative">
