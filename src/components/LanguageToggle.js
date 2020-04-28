@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import { AiOutlineDown } from 'react-icons/ai';
 import { MdLanguage } from 'react-icons/md';
 import { FormattedMessage } from 'react-intl';
 import styled, { useTheme } from 'styled-components';
@@ -37,16 +38,15 @@ function LanguageToggle() {
     <Dropdown
       color={color}
       backgroundColor={backgroundColor}
-      onMouseEnter={() => setHidden(false)}
-      onMouseLeave={() => setHidden(true)}
       className="dropdown rounded flex flex-col cursor-pointer rounded-b-none"
     >
-      <div className="wrapper">
+      <div onClick={toggle} className="wrapper">
         <div className="font-semibold py-1 px-2 inline-flex items-center focus:outline-none">
-          <span className="mr-1">
+          <MdLanguage size="1.5em" />
+          <span className="mx-1">
             <FormattedMessage id={KEYS.LANGUAGES}></FormattedMessage>
           </span>
-          <MdLanguage size="1.5em" />
+          <AiOutlineDown />
         </div>
       </div>
 
@@ -63,7 +63,7 @@ function LanguageToggle() {
                 <li
                   onClick={() => handleChange(language.id)}
                   key={language.id}
-                  className={`hover:font-bold py-2 px-4 whitespace-no-wrap`}
+                  className={`hover:font-bold py-1 px-2 whitespace-no-wrap`}
                 >
                   {language.displayName}
                 </li>
