@@ -5,17 +5,17 @@ import { MdEmail } from 'react-icons/md';
 const getFaIcon = (name) => {
   switch (name) {
     case 'github':
-      return <FaGithub size="2rem" />;
+      return <FaGithub size="2em" />;
     case 'twitter':
-      return <FaTwitter size="2rem" />;
+      return <FaTwitter size="2em" />;
     case 'linkedin':
-      return <FaLinkedin size="2rem" />;
+      return <FaLinkedin size="2em" />;
     case 'mail':
-      return <MdEmail size="2rem" />;
+      return <MdEmail size="2em" />;
     case 'blog':
-      return <FaHome size="2rem" />;
+      return <FaHome size="2em" />;
     default:
-      return <FaHome size="2rem" />;
+      return <FaHome size="2em" />;
   }
 };
 
