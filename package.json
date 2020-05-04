@@ -45,7 +45,6 @@
     ]
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^2.1.2",
     "autoprefixer": "^9.7.6",
     "cross-env": "^7.0.2",
     "gh-pages": "^2.2.0",
