@@ -26,7 +26,7 @@
     "format": "prettier --write src/**/*.{js,jsx,ts,tsx}",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
+    "build:css": "cross-env NODE_ENV=production postcss src/assets/tailwind.css -o src/assets/main.css",
     "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css"
   },
   "eslintConfig": {
@@ -51,6 +51,6 @@
     "gh-pages": "^2.2.0",
     "postcss-cli": "^7.1.0",
     "prettier": "^2.0.4",
-    "tailwindcss": "^1.2.0"
+    "tailwindcss": "^1.4.0"
   }
 }
