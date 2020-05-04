@@ -1,6 +1,6 @@
 {
-  "name": "Covid-19 au Maroc",
-  "short_name": "Suivi de la situation du corona virus au Maroc",
+  "name": "Corona Maroc",
+  "short_name": "Corona Maroc",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",

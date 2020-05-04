@@ -8,10 +8,7 @@ import Footer from '../Footer';
 import Header from '../Header';
 import Main from '../Main';
 
-const Wrapper = styled.div`
-  font-family: ${(props) =>
-    props.lang.startsWith('ar') ? "'Amiri', serif" : "'Open Sans', sans-serif"};
-`;
+const Wrapper = styled.div``;
 
 function DefaultLayout({ children }) {
   const { lang } = useContext(AppContext);
