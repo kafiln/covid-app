@@ -5,8 +5,8 @@ import LastUpdate from './LastUpdate';
 
 const Title = ({ lastUpdate }) => {
   return (
-    <div className="py-4">
-      <h1 className="text-4xl font-bold">
+    <div className="text-center">
+      <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold">
         <FormattedMessage id={KEYS.TITLE}></FormattedMessage>
       </h1>
       <LastUpdate lastUpdate={lastUpdate}></LastUpdate>

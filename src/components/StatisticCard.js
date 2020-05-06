@@ -31,9 +31,9 @@ function StatisticCard({ field, stats, inverted }) {
   const diff = actual - old;
   const isPositif = Math.sign(diff) * (inverted ? 1 : -1);
   return (
-    <div className={`w-full my-2 md:w-1/2  flex-grow`}>
+    <div className={`w-full my-2 sm:w-1/2  flex-grow`}>
       <div
-        className={`mx-2 py-6 px-3 h-full ${theme.statisticCard.container} shadow-lg rounded-lg flex`}
+        className={`mx-2 py-4 px-3 h-full ${theme.statisticCard.container} shadow-lg rounded-lg flex`}
       >
         <div className="flex-grow">
           <h2 className="text-1xl uppercase">

@@ -6,8 +6,8 @@ const socials = [
   { name: 'github', url: 'https://github.com/kafiil' },
   { name: 'twitter', url: 'https://twitter.com/Kaaafiiil' },
   { name: 'linkedin', url: 'https://linkedin.com/in/nkafil/' },
-  { name: 'blog', url: 'https://kafil.xyz' },
-  { name: 'mail', url: 'mailto:kafil.nasdami@gmail.com' },
+  // { name: 'blog', url: 'https://kafil.xyz' },
+  // { name: 'mail', url: 'mailto:kafil.nasdami@gmail.com' },
 ];
 
 function Footer() {
