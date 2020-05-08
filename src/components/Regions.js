@@ -35,8 +35,8 @@ function Regions({ regions }) {
         ),
       },
       {
-        id: 'percentage',
-        accessor: (r) => `+${r.percentage}%`,
+        accessor: 'percentage',
+        Cell: ({ value }) => `${value > 0 ? '+' : ''}${value}%`,
         Header: (
           <FormattedMessage
             id={KEYS.REGIONS_PERCENTAGE_CASES}
