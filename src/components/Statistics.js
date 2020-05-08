@@ -8,7 +8,7 @@ function Statistics({
 }) {
   return (
     <article className="py-4">
-      <h1 className="py-2 font-bold text-3xl">
+      <h1 className="py-2 font-bold text-2xl sm:text-3xl lg:text-5xl">
         <FormattedMessage id={KEYS.STATISTICS}></FormattedMessage>
       </h1>
       <div className="flex flex-wrap -mx-2">

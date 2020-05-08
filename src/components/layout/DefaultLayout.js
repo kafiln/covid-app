@@ -15,7 +15,7 @@ function DefaultLayout({ children }) {
   return (
     <Wrapper
       lang={lang}
-      className="container mx-auto p-1 flex flex-col min-h-screen"
+      className="container mx-auto py-1 px-6 flex flex-col min-h-screen"
     >
       <HelmetProvider>
         <FormattedMessage id={KEYS.WEBSITE_TITLE}>

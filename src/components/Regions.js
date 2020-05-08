@@ -49,7 +49,7 @@ function Regions({ regions }) {
 
   return (
     <article className="py-4">
-      <h1 className="py-2 font-bold text-3xl">
+      <h1 className="py-2 font-bold text-2xl sm:text-3xl lg:text-5xl">
         <FormattedMessage id={KEYS.STATISTICS_BY_REGION}></FormattedMessage>
       </h1>
       <div className="regions">
