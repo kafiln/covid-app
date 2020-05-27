@@ -16,7 +16,12 @@ const LastUpdate = ({ lastUpdate }) => {
               day="numeric"
             />
           ),
-          hour: <FormattedTime value={new Date(lastUpdate)}></FormattedTime>,
+          hour: (
+            <FormattedTime
+              timeZone="Africa/Casablanca"
+              value={new Date(lastUpdate)}
+            ></FormattedTime>
+          ),
         }}
       ></FormattedMessage>
     </h2>
