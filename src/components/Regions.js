@@ -87,7 +87,14 @@ function Table({ columns, data }) {
     {
       columns,
       data,
-      // disableSortRemove: true,
+      initialState: {
+        sortBy: [
+          {
+            id: 'difference',
+            desc: true,
+          },
+        ],
+      },
     },
     useSortBy
   );
