@@ -93,6 +93,11 @@ function Table({ columns, data }) {
             id: 'difference',
             desc: true,
           },
+
+          {
+            id: 'actual',
+            desc: true,
+          },
         ],
       },
     },
