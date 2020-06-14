@@ -8,7 +8,8 @@ export default createGlobalStyle`
     box-sizing: border-box;
 }
 body {
-  font-family: 'Amiri', serif;
+  
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   transition: all .5s ease;
   background-color: ${(props) => props.theme.backgroundColor};
   color: ${(props) => props.theme.color};
