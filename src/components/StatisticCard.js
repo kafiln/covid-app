@@ -1,25 +1,25 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { useTheme } from 'styled-components';
-import confirmed from '../assets/img/confirmed.svg';
-import deaths from '../assets/img/deaths.svg';
-import negatives from '../assets/img/negatives.svg';
-import recovered from '../assets/img/recovered.svg';
+import Confirmed from '../assets/img/confirmed.svg';
+import Deaths from '../assets/img/deaths.svg';
+import Negatives from '../assets/img/negatives.svg';
+import Recovered from '../assets/img/recovered.svg';
 import { KEYS } from '../i18n';
 
 //TODO: Search for a better way to achieve this
-const stringToImg = (name) => {
+const stringToReactSVG = (name) => {
   switch (name) {
     case 'confirmed':
-      return confirmed;
+      return <Confirmed />;
     case 'deaths':
-      return deaths;
+      return <Deaths />;
     case 'negatives':
-      return negatives;
+      return <Negatives />;
     case 'recovered':
-      return recovered;
+      return <Recovered />;
     default:
-      return negatives;
+      return <Negatives />;
   }
 };
 
@@ -63,9 +63,7 @@ function StatisticCard({ field, stats, inverted }) {
             ></FormattedMessage>
           </p>
         </div>
-        <div>
-          <img src={stringToImg(stats)} alt={stats} />
-        </div>
+        {stringToReactSVG(stats)}
       </div>
     </div>
   );

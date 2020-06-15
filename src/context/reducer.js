@@ -1,7 +1,6 @@
-import Types from './types';
-const { CHANGE_LANGUAGE, CHANGE_THEME } = Types;
+import { CHANGE_LANGUAGE, CHANGE_THEME, DARK, LIGHT } from './types';
 
-const THEMES = ['dark', 'light'];
+const THEMES = [DARK, LIGHT];
 
 const toggleValue = (value, choices) => {
   const index = choices.indexOf(value);

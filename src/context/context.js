@@ -1,8 +1,9 @@
 import { createContext } from 'react';
+import { LIGHT } from './types';
 
 export const initialState = {
-  lang: localStorage.getItem('lang') || 'fr-fr',
-  theme: localStorage.getItem('theme') || 'light',
+  lang: 'fr-fr',
+  theme: LIGHT,
 };
 
 export default createContext(initialState);

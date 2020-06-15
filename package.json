@@ -1,55 +1,27 @@
 {
   "name": "covid",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
+    "next": "^9.4.4",
+    "node-fetch": "^2.6.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-helmet-async": "^1.0.5",
     "react-icons": "^3.9.0",
     "react-intl": "^4.3.1",
-    "react-scripts": "3.4.1",
     "react-switch": "^5.0.1",
     "react-table": "^7.0.4",
     "styled-components": "^5.1.0"
   },
   "scripts": {
-    "prestart": "npm run watch:css",
-    "start": "react-scripts start",
-    "prebuild": "npm run build:css",
-    "build": "cross-env GENERATE_SOURCEMAP=false  react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "format": "prettier --write src/**/*.{js,jsx,ts,tsx}",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "build:css": "cross-env NODE_ENV=production postcss src/assets/tailwind.css -o src/assets/main.css",
-    "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "devDependencies": {
-    "autoprefixer": "^9.7.6",
-    "cross-env": "^7.0.2",
-    "gh-pages": "^2.2.0",
-    "postcss-cli": "^7.1.0",
-    "prettier": "^2.0.4",
-    "tailwindcss": "^1.4.0"
+    "babel-plugin-inline-react-svg": "^1.1.1",
+    "babel-plugin-styled-components": "^1.10.7",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "^1.4.6"
   }
 }

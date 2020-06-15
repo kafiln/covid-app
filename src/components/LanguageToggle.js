@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
-import { AppContext, Types } from '../context';
+import { AppContext } from '../context';
+import { CHANGE_LANGUAGE } from '../context/types';
 import { Languages as LOCALES } from '../i18n';
 
 function LanguageToggle() {
@@ -9,7 +10,7 @@ function LanguageToggle() {
 
   const handleChange = (langId) => {
     dispatch({
-      type: Types.CHANGE_LANGUAGE,
+      type: CHANGE_LANGUAGE,
       payload: langId,
     });
   };
