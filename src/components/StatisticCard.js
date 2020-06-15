@@ -45,7 +45,7 @@ function StatisticCard({ field, stats, inverted }) {
             </div>
             <div
               className={`mx-3 ${
-                isPositif > 0 ? 'bg-green-600' : 'bg-red-600'
+                isPositif >= 0 ? 'bg-green-600' : 'bg-red-600'
               } p-1 rounded text-sm text-white font-bold`}
             >
               {diff > 0 ? '+' : ''}
