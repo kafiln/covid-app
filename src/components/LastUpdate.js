@@ -4,7 +4,7 @@ import { KEYS } from '../i18n';
 
 const LastUpdate = ({ lastUpdate }) => {
   return (
-    <h2 className="pb-2 text-md sm:text-lg lg:text-2xl text-gray-600">
+    <h2 className="pb-2 text-md sm:text-lg lg:text-2xl text-gray-700">
       <FormattedMessage
         id={KEYS.LAST_UPDATED}
         values={{

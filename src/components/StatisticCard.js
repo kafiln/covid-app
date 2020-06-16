@@ -41,12 +41,12 @@ function StatisticCard({ field, stats, inverted }) {
           </h2>
           <div className="flex items-center">
             <div>
-              <h3 className="text-4xl font-bold">{actual}</h3>
+              <h3 className="text-4xl font-bold ">{actual}</h3>
             </div>
             <div
               className={`mx-3 ${
                 isPositif >= 0 ? 'bg-green-600' : 'bg-red-600'
-              } p-1 rounded text-sm text-white font-bold`}
+              } p-1 rounded text-sm text-white text-xl font-bold`}
             >
               {diff > 0 ? '+' : ''}
               {diff}
