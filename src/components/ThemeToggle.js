@@ -6,7 +6,6 @@ import { Toggle } from './common';
 function ThemeToggle({ defaultValue }) {
   const { theme, dispatch } = useContext(AppContext);
   const handleChange = () => {
-    console.log('Changing theme');
     dispatch({
       type: CHANGE_THEME,
     });
