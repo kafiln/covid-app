@@ -2,6 +2,7 @@ import { CHANGE_LANGUAGE, CHANGE_THEME, DARK, LIGHT } from './types';
 
 const THEMES = [DARK, LIGHT];
 
+// Overkill 😌
 const toggleValue = (value, choices) => {
   const index = choices.indexOf(value);
   return choices[Number(!index)];
