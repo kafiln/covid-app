@@ -8,5 +8,6 @@ export default {
   regions: {
     header: 'bg-gray-200 ',
     cell: 'bg-gray-200 ',
+    borderColor: '',
   },
 };

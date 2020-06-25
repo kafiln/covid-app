@@ -106,15 +106,18 @@ function Table({ columns, data }) {
 
   return (
     <>
-      <table {...getTableProps()} className="w-full table-auto">
-        <thead className="">
+      <table
+        {...getTableProps()}
+        className={`${theme.regions.borderColor} w-full table-auto`}
+      >
+        <thead className={`${theme.regions.borderColor}`}>
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column) => (
                 <th
-                  className={`p-1 border ${theme.regions.header} ${
-                    column.canSort && 'cursor-pointer'
-                  }`}
+                  className={`p-1 border ${theme.regions.borderColor} ${
+                    theme.regions.header
+                  } ${column.canSort && 'cursor-pointer'}`}
                   {...column.getHeaderProps(column.getSortByToggleProps())}
                   style={{ textAlign: 'start' }}
                 >
@@ -125,17 +128,25 @@ function Table({ columns, data }) {
             </tr>
           ))}
         </thead>
-        <tbody className="" {...getTableBodyProps()}>
+        <tbody
+          className={`${theme.regions.borderColor}`}
+          {...getTableBodyProps()}
+        >
           {rows.map((row, i) => {
             prepareRow(row);
             return (
               <tr
-                className={i % 2 ? theme.regions.cell : ''}
+                className={`${theme.regions.borderColor} ${
+                  i % 2 ? theme.regions.cell : ''
+                } `}
                 {...row.getRowProps()}
               >
                 {row.cells.map((cell) => {
                   return (
-                    <td className="p-1 border" {...cell.getCellProps()}>
+                    <td
+                      className={`${theme.regions.borderColor} p-1 border`}
+                      {...cell.getCellProps()}
+                    >
                       {cell.render('Cell')}
                     </td>
                   );

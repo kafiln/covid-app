@@ -7,6 +7,7 @@ export default {
   githubButton: ' bg-black text-white border-white',
   regions: {
     header: 'bg-gray-800 ',
-    cell: 'bg-gray-800 ',
+    cell: 'bg-gray-800',
+    borderColor: 'border-gray-700',
   },
 };
