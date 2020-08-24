@@ -29,7 +29,7 @@ function Regions({ regions }) {
       },
       {
         id: 'difference',
-        accessor: (r) => r.actual - r.old,
+        accessor: (r) => (r.actual - r.old > 0 ? r.actual - r.old : 0),
         Header: (
           <FormattedMessage id={KEYS.REGIONS_DAILY_CASES}></FormattedMessage>
         ),
