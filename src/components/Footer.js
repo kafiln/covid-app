@@ -3,9 +3,9 @@ import SocialItem from './SocialItem';
 
 //TODO: Put this in a config file
 const socials = [
-  { name: 'github', url: 'https://github.com/kafiil' },
-  { name: 'twitter', url: 'https://twitter.com/Kaaafiiil' },
-  { name: 'linkedin', url: 'https://linkedin.com/in/nkafil/' },
+  { name: 'github', url: 'https://github.com/kafiln' },
+  { name: 'twitter', url: 'https://twitter.com/kafiiil' },
+  { name: 'linkedin', url: 'https://linkedin.com/in/kafiln/' },
   // { name: 'blog', url: 'https://kafil.xyz' },
   // { name: 'mail', url: 'mailto:kafil.nasdami@gmail.com' },
 ];
